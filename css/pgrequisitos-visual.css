@@ -1,7 +1,5 @@
 /* ==========================================================
    ESTILOS ESPECÍFICOS PARA A PÁGINA DE REQUISITOS (VERSÃO FINAL E COMPLETA)
-   - Inclui estilos para Controle de Estoque e Funcionalidades Complementares.
-   - Paleta de cores 100% harmonizada com tons de roxo.
 ========================================================== */
 
 
@@ -149,13 +147,9 @@
    NOTA INFORMATIVA PARA O CARD DE CADASTRO COMPLETO
 ========================================================== */
 
-
-/* Prepara o card para posicionar a nota dentro dele */
-
 .mode-card.complete {
     position: relative;
     overflow: hidden;
-    /* Garante que a nota não vaze para fora */
 }
 
 
@@ -167,7 +161,6 @@
     left: 0;
     right: 0;
     background: #f3e8ff;
-    /* Um tom de roxo bem claro */
     color: var(--accent-dark);
     padding: 0.8rem 1rem;
     font-size: 0.90rem;
@@ -175,12 +168,9 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* Efeito de transição */
     transition: all 0.3s ease-in-out;
-    /* Esconde a nota por padrão */
     opacity: 0;
     transform: translateY(100%);
-    /* Começa totalmente para baixo */
 }
 
 .fiscal-note i {
@@ -188,13 +178,12 @@
 }
 
 
-/* Exibe a nota ao passar o mouse ou focar no card */
+/* Exibir a nota ao passar o mouse ou focar no card */
 
 .mode-card.complete:hover .fiscal-note,
 .mode-card.complete:focus-within .fiscal-note {
     opacity: 1;
     transform: translateY(0);
-    /* Sobe para a posição final */
 }
 
 
@@ -886,5 +875,15 @@
         height: 30px;
         margin: .5rem 0;
         flex-grow: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .control-flow {
+        flex-direction: column;
+    }
+    .control-flow>.fa-arrow-right {
+        transform: rotate(90deg);
+        margin: 1rem 0;
     }
 }

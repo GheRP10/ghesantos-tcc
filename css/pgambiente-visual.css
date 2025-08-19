@@ -1,85 +1,11 @@
 /* ==========================================================
-   ESTILOS GERAIS DA PÁGINA (BASE)
+   ESTILOS ESPECÍFICOS PARA A PÁGINA DE AMBIENTE VISUAL
    ========================================================== */
 
-:root {
-    --accent: #9400D3;
-    --accent-light: #a64dd8;
-    --accent-dark: #7b2bcf;
-    --ink: #1f2937;
-    --neutral: #4b5563;
-}
 
-body {
-    background: linear-gradient(180deg, rgba(148, 0, 211, .95) 0%, #9400D3 45%, #5a2ea6 100%);
-    background-attachment: fixed;
-    color: var(--ink);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.text-accent {
-    color: var(--accent) !important;
-}
-
-
-/* ==========================================================
-   ESTRUTURA DOS CARDS DA PÁGINA
-   ========================================================== */
-
-.visual-feature-card {
-    border: 2px solid #e5ccf5;
-    background: #faf6fc;
-    border-radius: 14px;
-    padding: 2rem 1.5rem;
-    margin-bottom: 3rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.visual-feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--accent), #7b2bcf);
-    animation: progress 3s ease-in-out infinite;
-}
-
-.vfc-head {
-    display: flex;
-    align-items: center;
-    gap: .8rem;
-    margin-bottom: 2rem;
-    justify-content: center;
-}
-
-.vfc-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background: linear-gradient(135deg, var(--accent), #7b2bcf);
-    color: white;
-    font-size: 1.8rem;
-    box-shadow: 0 10px 25px rgba(148, 0, 211, .3);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.vfc-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-
-/* ==========================================================
+/* =====================================
    CARD 1: AMBIENTE IDEAL
-   ========================================================== */
+   ===================================== */
 
 .ideal-environment {
     display: flex;
@@ -128,7 +54,7 @@ body {
 }
 
 
-/* --- Seção de Features "Could Have" --- */
+/* --- Seção "Could Have" --- */
 
 .features-showcase {
     background: rgba(255, 255, 255, 0.7);
@@ -146,7 +72,7 @@ body {
 
 .advanced-features-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -177,9 +103,9 @@ body {
 }
 
 
-/* ==========================================================
+/* =====================================
    CARD 2: AMBIENTE PROPOSTO
-   ========================================================== */
+   ===================================== */
 
 .proposed-environment {
     display: flex;
@@ -202,13 +128,6 @@ body {
 
 .system-description p {
     margin: 0;
-    text-align: justify;
-}
-
-.environment-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 }
 
 .env-section {
@@ -229,8 +148,8 @@ body {
 /* --- Infraestrutura Simplificada --- */
 
 .infra-simple-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
 }
 
@@ -294,7 +213,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2.5rem;
 }
@@ -320,19 +238,6 @@ body {
     font-weight: 700;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    animation: bounce 2s ease-in-out infinite;
-}
-
-.function-step:nth-of-type(2) .step-number {
-    animation-delay: 0.4s;
-}
-
-.function-step:nth-of-type(3) .step-number {
-    animation-delay: 0.8s;
-}
-
-.function-step:nth-of-type(4) .step-number {
-    animation-delay: 1.2s;
 }
 
 .step-content i {
@@ -356,6 +261,9 @@ body {
     color: var(--accent);
     margin-top: 50px;
 }
+
+
+/* --- Funcionalidades Adicionais --- */
 
 .additional-features {
     display: flex;
@@ -393,7 +301,9 @@ body {
 }
 
 
-/* --- Comparação Visual --- */
+/* =====================================
+   CARD 3: COMPARAÇÃO DE AMBIENTES
+   ===================================== */
 
 .comparison-grid {
     display: flex;
@@ -507,66 +417,23 @@ body {
 }
 
 
-/* ==========================================================
-   ANIMAÇÕES
-   ========================================================== */
-
-@keyframes progress {
-    0% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes pulse {
-    0%,
-    100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes bounce {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-
-/* ==========================================================
-   PENTE FINO: AJUSTES FINAIS DE RESPONSIVIDADE
-   ========================================================== */
+/* =====================================
+   AJUSTES FINAIS DE RESPONSIVIDADE
+   ===================================== */
 
 @media (max-width: 992px) {
-    .advanced-features-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .main-functions-flow {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .main-functions-flow .flow-arrow {
+        margin-top: 0;
+        transform: rotate(90deg);
     }
 }
 
 @media (max-width: 768px) {
-    .vfc-head {
-        flex-direction: column;
-        text-align: center;
-    }
-    .main-functions-flow {
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
-    }
-    .main-functions-flow .flow-arrow {
-        display: none;
-    }
     .comparison-grid {
         flex-direction: column;
         align-items: center;
@@ -574,11 +441,5 @@ body {
     }
     .comparison-grid .vs-divider {
         display: none;
-    }
-}
-
-@media (max-width: 576px) {
-    .advanced-features-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -7,14 +7,8 @@
 
 .spotlight-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-}
-
-@media (min-width: 992px) {
-    .spotlight-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 .entity-spotlight {
@@ -71,6 +65,8 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
+    line-height: 1.4;
 }
 
 
@@ -97,14 +93,6 @@
 
 
 /* Grid para entidades de apoio */
-
-
-/* .support-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    text-align: center;
-} */
 
 .support-item {
     background: #f5f0fa;
@@ -150,12 +138,10 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 1.1rem;
-    /* Ajuste para caber melhor */
 }
 
 .entity-card p {
     font-size: 0.95rem;
-    /* Ajuste para caber melhor */
     line-height: 1.6;
     color: var(--neutral);
 }
@@ -165,7 +151,6 @@
 
 .entity-footer {
     background: #f8f5fa;
-    /* Tom de roxo mais sutil */
     border-radius: 12px;
     padding: 1.5rem;
     margin-top: 2rem;

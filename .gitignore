@@ -1,0 +1,14 @@
+# Pasta do Visual Studio
+.vs/
+bin/
+obj/
+
+# Arquivos temporários
+*.user
+*.suo
+*.cache
+*.log
+
+# Sistema
+Thumbs.db
+*.DS_Store
