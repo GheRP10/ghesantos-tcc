@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-br">
 
 <head>
@@ -7,7 +7,7 @@
     <title>4. FUNDAMENTAÇÃO & MODELOGEM — GS CELL</title>
     <meta name="description" content="4. FUNDAMENTAÇÃO & MODELOGEM — Documentação do GS CELL">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/pgmodelagem.css">
     <link rel="icon" type="image/png" href="assets/gs_icon.png">
@@ -37,7 +37,7 @@
                             <li><a class="dropdown-item" href="diagramas.html">Diagramas</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="prototipacao.html">Prototipação</a></li>
+                    
                     <li class="nav-item"><a class="nav-link" href="conclusao.html">Conclusão</a></li>
                     <li class="nav-item"><a class="nav-link" href="referencias.html">Referências</a></li>
                 </ul>
@@ -134,43 +134,37 @@
                             que são combinados com regras programadas para gerar resultados significativos aos usuários.
                         </blockquote>
                         <!--/4.3.1 -->
-                        <blockquote cite="SOMMERVILLE, 2007; SOMMERVILLE, 2011; ROSA, 2005">
-                            <p>Durante o levantamento de requisitos, os requisitos de um sistema são descrições dos serviços fornecidos pelo sistema e suas restrições operacionais. Esses requisitos podem refletir necessidades dos clientes para resolver problemas
-                                específicos, como controlar processos ou gerenciar informações. O processo de descobrir, analisar, documentar e verificar serviços e restrições é chamado de engenharia de requisitos (SOMMERVILLE, 2007).</p>
+                        <h6 class="mt-3 mb-2 fw-bold">4.3.2 Levantamento de Requisitos</h6>
+                        <blockquote cite="SOMMERVILLE, 2007">
+                            <p>Durante o levantamento de requisitos, os requisitos de um sistema são descrições dos serviços fornecidos pelo sistema e suas restrições operacionais. Esses requisitos podem refletir necessidades dos clientes para resolver problemas específicos, como controlar processos ou gerenciar informações. O processo de descobrir, analisar, documentar e verificar serviços e restrições é chamado de engenharia de requisitos (SOMMERVILLE, 2007).</p>
 
-                            <p>Os requisitos dividem-se em duas categorias principais:</p>
-
-                            <p><strong>Requisitos Funcionais:</strong> descrevem o que um sistema deve fazer, dependendo do tipo de software desenvolvido e dos usuários aos quais se destina. Quando expressos como requisitos de usuário, podem ser descritos
-                                de forma abstrata, detalhando funções, entradas e saídas do sistema (SOMMERVILLE, 2011).</p>
-
-                            <p><strong>Requisitos Não Funcionais:</strong> não estão diretamente relacionados às funções específicas fornecidas pelo sistema, podendo estar relacionados a propriedades emergentes como confiabilidade, tempo de resposta e espaço
-                                de armazenamento. Podem definir restrições sobre capacidades de dispositivos e representações de dados (ROSA, 2005).</p>
+                            <p>Os requisitos de um sistema podem ser classificados em duas categorias principais: requisitos funcionais e requisitos não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando ações, comportamentos e serviços disponibilizados aos usuários. Já os requisitos não funcionais estão relacionados às características de qualidade do sistema, como desempenho, segurança, usabilidade, confiabilidade e restrições técnicas, influenciando diretamente a forma como as funcionalidades são implementadas.</p>
                         </blockquote>
                     </div>
 
                     <div class="feature-card">
                         <div class="fc-head">
                             <div class="fc-icon"><i class="fa-solid fa-microchip"></i></div>
-                            <h5>4.5 Tecnologias e Plataformas de Desenvolvimento</h5>
+                            <h5>4.4 Tecnologias e Plataformas de Desenvolvimento</h5>
                         </div>
-                        <h6 class="mt-1 mb-2 fw-bold">4.5.1 Arquitetura em Camadas</h6>
+                        <h6 class="mt-1 mb-2 fw-bold">4.4.1 Arquitetura em Camadas</h6>
                         <p>
                             A estruturação de sistemas em camadas (apresentação, lógica de negócio e acesso a dados) segue práticas consolidadas de desenvolvimento, baseando-se na separação de responsabilidades. Essa abordagem facilita a manutenção do código, o reaproveitamento
                             de componentes e a futura evolução do sistema.
                         </p>
 
-                        <h6 class="mt-3 mb-2 fw-bold">4.5.2 Plataforma .NET e C#</h6>
+                        <h6 class="mt-3 mb-2 fw-bold">4.4.2 Plataforma .NET e C#</h6>
                         <p>
                             O framework .NET da Microsoft oferece um ambiente robusto para desenvolvimento de aplicações empresariais. A linguagem C#, integrada a este ecossistema, proporciona tipagem forte, orientação a objetos e recursos avançados para desenvolvimento de sistemas
                             web através do ASP.NET.
                         </p>
 
-                        <h6 class="mt-3 mb-2 fw-bold">4.5.3 ASP.NET para Desenvolvimento Web</h6>
+                        <h6 class="mt-3 mb-2 fw-bold">4.4.3 ASP.NET para Desenvolvimento Web</h6>
                         <p>
                             O ASP.NET é uma plataforma de desenvolvimento web que permite a criação de aplicações robustas e escaláveis, oferecendo recursos avançados para desenvolvimento de sistemas empresariais, incluindo suporte nativo para bancos de dados relacionais.
                         </p>
 
-                        <h6 class="mt-3 mb-2 fw-bold">4.5.4 Sistemas de Gerenciamento de Banco de Dados</h6>
+                        <h6 class="mt-3 mb-2 fw-bold">4.4.4 Sistemas de Gerenciamento de Banco de Dados</h6>
                         <blockquote cite="DATE, 2004">
                             <p>O SQL Server é um sistema de gerenciamento de banco de dados relacional (SGBD) que permite ao usuário armazenar, manipular, atualizar e deletar informações. Essas informações devem ter significado e valor para indivíduos ou
                                 instituições, auxiliando processos gerais dos usuários (DATE, 2004).</p>
@@ -180,7 +174,7 @@
                             <p>O projeto de banco de dados utiliza três etapas principais: modelagem conceitual, lógica e física, buscando demonstrar como as informações serão armazenadas eficientemente (COSTA, 2016).</p>
                         </blockquote>
 
-                        <h6 class="mt-3 mb-2 fw-bold">4.5.5 Ferramentas de Desenvolvimento Integrado</h6>
+                        <h6 class="mt-3 mb-2 fw-bold">4.4.5 Ferramentas de Desenvolvimento Integrado</h6>
                         <p>
                             As IDEs (Integrated Development Environment) modernas oferecem recursos avançados como depuração, IntelliSense, integração com controle de versão e ferramentas de teste, proporcionando alta produtividade no desenvolvimento de aplicações. Essas ferramentas
                             são essenciais para manter a qualidade e organização do código durante todo o ciclo de desenvolvimento.
@@ -190,21 +184,21 @@
                     <div class="feature-card">
                         <div class="fc-head">
                             <div class="fc-icon"><i class="fa-solid fa-diagram-project"></i></div>
-                            <h5>4.6 Modelagem de Software</h5>
+                            <h5>4.5 Modelagem de Software</h5>
                         </div>
-                        <h6 class="mt-1 mb-2 fw-bold">4.6.1 UML (Unified Modeling Language)</h6>
+                        <h6 class="mt-1 mb-2 fw-bold">4.5.1 UML (Unified Modeling Language)</h6>
                         <blockquote cite="GUEDES, 2009">
                             A UML tem como objetivo fornecer múltiplas visões dos sistemas para melhorar, reforçar especificações, visualizações e documentações dos requisitos de software. A UML permite sobrepor um modelo a um plano de arquitetura, auxiliando no desenvolvimento
                             de projetos de sistema e compreendendo processos de negócio, funções do sistema e esquemas de banco de dados (GUEDES, 2009).
                         </blockquote>
 
-                        <h6 class="mt-3 mb-2 fw-bold">4.6.2 Diagramas de Caso de Uso</h6>
+                        <h6 class="mt-3 mb-2 fw-bold">4.5.2 Diagramas de Caso de Uso</h6>
                         <blockquote cite="GUEDES, 2009">
                             <p>O diagrama de caso de uso concentra-se em atores e casos de uso. Os atores representam papéis desempenhados por usuários que utilizam serviços e funções do sistema. Os casos de uso capturam requisitos do sistema, referindo-se
                                 a serviços, tarefas ou funcionalidades identificadas como necessárias e que podem ser utilizadas pelos atores (GUEDES, 2009).</p>
                         </blockquote>
 
-                        <h6 class="mt-3 mb-2 fw-bold">4.6.3 Diagrama de Entidade-Relacionamento (DER)</h6>
+                        <h6 class="mt-3 mb-2 fw-bold">4.5.3 Diagrama de Entidade-Relacionamento (DER)</h6>
                         <blockquote cite="Rezende, 2005">
                             <p>Segundo Rezende (2005), o DER tem como objetivo principal representar objetos de dados e suas relações, finalizando a representação em tabelas de dados. É uma técnica de modelagem usada em conjunto com outras técnicas de diagramação
                                 que direcionam o desenvolvimento de software e projetos de bancos de dados.</p>
@@ -214,10 +208,10 @@
                     <div class="feature-card">
                         <div class="fc-head">
                             <div class="fc-icon"><i class="fa-solid fa-toolbox"></i></div>
-                            <h5>4.7 Sistemas de Gestão para Assistências Técnicas</h5>
+                            <h5>4.6 Sistemas de Gestão para Assistências Técnicas</h5>
                         </div>
                         <blockquote cite="Cutrim, 2016">
-                            <p>A implementação de sistemas informatizados em assistências técnicas de pequeno porte apresenta desafios específicos relacionados à limitação de recursos e necessidade de soluções acessíveis. Cutrim (2016) destaca que empresas
+                            <p>A implementação de sistemas informatizados em assistências técnicas de pequeno porte apresenta desafios específicos relacionados à limitação de recursos e à necessidade de soluções acessíveis. Cutrim (2016) destaca que empresas
                                 de informática necessitam de software específico para gerir suas atividades, proporcionando tanto gestão quanto segurança.</p>
                         </blockquote>
 
